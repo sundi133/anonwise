@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "anonwise"
+version = "0.1.0"
+description = "safeguarding sensitive information before it is utilized by LLMs and GPTs for various applications of text generation"
+authors = ["sundi133"]
+license = "Apache License 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

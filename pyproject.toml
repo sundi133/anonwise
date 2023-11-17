@@ -10,6 +10,8 @@ readme = "README.md"
 python = "^3.9"
 black = "^23.9.1"
 spacy = "^3.7.0"
+uvicorn = "^0.24.0.post1"
+fastapi = "^0.104.1"
 
 
 [build-system]

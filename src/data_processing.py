@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import spacy
 import json
 import argparse
@@ -8,9 +10,9 @@ from spacy.tokens import DocBin
 from tqdm import tqdm
 
 
-def process_data(data):
+def process_data(ner_data):
     training_data = []
-    for example in data["training_data"]:
+    for example in ner_data:
         temp_dict = {}
         temp_dict["text"] = example["text"]
         temp_dict["entities"] = []
@@ -63,9 +65,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Process NER data and save it in spaCy format"
     )
-    parser.add_argument("input_file", type=str, help="Path to the input JSON file")
+
+    parser.add_argument("--input_file", type=str, help="Path to the input JSON file")
     parser.add_argument(
-        "output_file", type=str, help="Path to the output spaCy data file"
+        "--output_file", type=str, help="Path to the output spaCy data file"
     )
 
     args = parser.parse_args()

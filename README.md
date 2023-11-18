@@ -11,12 +11,7 @@
 ## Openeval [ Repo ](https://github.com/sundi133/openeval) (Step 1 & 2 for data generation)
 
 ``` bash 
-1) curl -X POST http://localhost:8000/generate/ \                                                                        
--F "file=@data/fixtures/ner/credit_card_entities.json" \
--F "number_of_questions=1" \
--F "sample_size=50" \
--F "prompt_key=prompt_key_ner_sentences" \
--F "llm_type=.ner"
+1) curl -X POST http://localhost:8000/generate/ -F "file=@data/fixtures/ner/credit_card_entities.json" -F "number_of_questions=1" -F "sample_size=50" -F "prompt_key=prompt_key_ner_sentences" -F "llm_type=.ner"        
 
 2) curl -OJ http://localhost:8000/download/c5203e56137246289b9203e773b44f11
 ```

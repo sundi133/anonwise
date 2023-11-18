@@ -62,7 +62,7 @@ def get_anonymize_data(label):
     elif label == "ORG":
         return "Company XYZ"
     elif label == "CREDIT_CARD_NUMBER":
-        return "Credit Card Number xxxx-xxxx-xxxx-xxxx"
+        return "xxxx-xxxx-xxxx-xxxx"
     else:
         # Default placeholder for unknown labels
         return "Anonymize Data {label}"

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  anonwise:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"
+    env_file:
+      - .env
+    command: poetry run uvicorn src.serve:app --host 0.0.0.0 --port 8002

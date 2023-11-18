@@ -1,16 +1,14 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+
 import spacy
 import configparser
+import os
 
 app = FastAPI()
 
-# Load the SpaCy model
-config = configparser.ConfigParser()
-config.read("anonwise.ini")
-
 # Get SpaCy model path from the configuration
-spacy_model_path = config.get("app", "spacy_model_path")
+spacy_model_path = os.environ["SPACY_MODEL_PATH"]
 entity_detection_model = spacy.load(spacy_model_path)
 
 
